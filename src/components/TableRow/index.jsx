@@ -1,5 +1,6 @@
 import Count from './../Count';
-import DeleteBtn from '../DeleteBtn';
+import DeleteBtn from './../DeleteBtn';
+import priceFormatter from './../../utils/priceFormatter';
 
 import './style.sass';
 
@@ -18,7 +19,7 @@ const TableRow = ({ goodie, deleteGoogie, incrise, decrise, changeValue }) => {
         decrise={ decrise }
         changeValue={ changeValue }
       />
-      <span>$<span className="section-cart__table_row-price">{ priceTotal }</span></span>
+      <span>$<span className="section-cart__table_row-price">{ priceFormatter(priceTotal) }</span></span>
       <DeleteBtn id={ id } deleteGoogie={ deleteGoogie } />
     </div>
   );

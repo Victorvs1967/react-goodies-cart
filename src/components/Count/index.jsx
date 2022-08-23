@@ -9,7 +9,7 @@ const Count = ({ id, count, incrise, decrise, changeValue }) => (
         min={ 1 } 
         max={ 50 } 
         value={ count } 
-        onChange={event => changeValue(id, event.target.value) } 
+        onChange={event => changeValue(id, +event.target.value) } 
       />
     </div>
     <div className="section-cart__table_row-controls">
