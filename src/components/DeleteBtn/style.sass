@@ -1,0 +1,30 @@
+@import './../../styles/_vars'
+
+.close-control
+  width: 1.2rem
+  height: 1.2rem
+  margin-left: auto
+  display: block
+  background-color: transparent
+  border: none
+  cursor: pointer
+  z-index: 999
+  &__item
+    position: relative
+    display: block
+    &::before,
+    &::after
+      content: ''
+      width: 100%
+      position: absolute
+      top: 50%
+      left: 0
+      height: calc(1.2rem / 10)
+      background-color: #7E9BBD
+      border-radius: 1rem
+      transition: .4s transform
+      -webkit-transition: .4s transform
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
